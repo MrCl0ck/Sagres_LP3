@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import javax.swing.JOptionPane;
 
+import universidade.banco.BancoDeDadosDiscipinas;
 import universidade.modelo.ModeloDisciplina;
 import universidade.modelo.persistencia.DadosDisciplina;
 
@@ -88,9 +89,9 @@ public class ValidaçãoDisciplina{
 	}
 	
 	public boolean validacaoCodigo() {
-		DadosDisciplina disciplinaCodigo = new DadosDisciplina(); 
+		BancoDeDadosDiscipinas disciplinaCodigo = new BancoDeDadosDiscipinas(); 
 			
-		for (ModeloDisciplina u: disciplinaCodigo.getDisciplinasArraylist()) {
+		for (ModeloDisciplina u: disciplinaCodigo.listarDisciplinas()) {
 			if(nomeDisciplina.equals(u.getNomeDisciplina().toString()) && codigoDisciplina.equals(u.getCodigoDisciplina().toString())){
 				JOptionPane.showMessageDialog(null, "Esta disciplina já foi cadastrada!", "Erro", JOptionPane.ERROR_MESSAGE);
 				return false;

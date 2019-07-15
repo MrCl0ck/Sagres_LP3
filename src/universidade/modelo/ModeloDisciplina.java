@@ -12,9 +12,17 @@ public class ModeloDisciplina implements Serializable{
 	private String cursoDisciplina;
 	private String cargaHorariaDisciplina;
 	private String semestreDisciplina;
-	private ArrayList<String> turmaDisciplina;	
+	private String turmaDisciplina;	
 	private ArrayList<String> preRequisitosDisciplinaCodigo;
 	
+	
+	public ModeloDisciplina(String text, String string, String string2, String string3, String string4, Object object,
+			String string5) {
+		// TODO Auto-generated constructor stub
+	}
+	public ModeloDisciplina() {
+		
+	}	
 	
 	public String getNomeDisciplina() {
 		return nomeDisciplina;
@@ -52,11 +60,11 @@ public class ModeloDisciplina implements Serializable{
 	public void setSemestreDisciplina(String semestreDisciplina) {
 		this.semestreDisciplina = semestreDisciplina;
 	}
-	public ArrayList<String> getTurmaDisciplina() {
+	public String getTurmaDisciplina() {
 		return turmaDisciplina;
 	}
-	public void setTurmaDisciplina(ArrayList<String> turmaDisciplina) {
-		this.turmaDisciplina = turmaDisciplina;
+	public void setTurmaDisciplina(String string) {
+		this.turmaDisciplina = string;
 	}
 	public ArrayList<String> getPreRequisitosDisciplina() {
 		return preRequisitosDisciplinaCodigo;
